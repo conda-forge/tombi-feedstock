@@ -1,6 +1,6 @@
 context:
   name: tombi
-  version: "0.4.42"
+  version: "0.5.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/tombi-toml/tombi/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 51c9476459f149a36762e7435a39efbe43d80058db4059a765632795997e02e7
+  sha256: 1e1b41be1a099e3a7f3d5e5dec809e8814036b919ae7ec5b00fe70bbfb0ee744
 
 build:
   number: 0
