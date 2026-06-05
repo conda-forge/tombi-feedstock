@@ -40,6 +40,10 @@ tests:
       - if: win
         then: tombi --version | findstr "${{ version }}"
         else: tombi --version | grep -F '${{ version }}'
+  - package_contents:
+      bin:
+        - tombi
+      strict: true
 
 about:
   homepage: https://tombi-toml.github.io/tombi
