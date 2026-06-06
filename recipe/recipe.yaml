@@ -11,7 +11,7 @@ source:
   sha256: c36a1aff7b3c7cd78ef1ffd7262517aa455314874ef15e825c6ad7ab238d1c2a
 
 build:
-  number: 0
+  number: 1
   script:
     env:
       CARGO_PROFILE_RELEASE_STRIP: symbols
@@ -40,6 +40,10 @@ tests:
       - if: win
         then: tombi --version | findstr "${{ version }}"
         else: tombi --version | grep -F '${{ version }}'
+  - package_contents:
+      bin:
+        - tombi
+      strict: true
 
 about:
   homepage: https://tombi-toml.github.io/tombi
